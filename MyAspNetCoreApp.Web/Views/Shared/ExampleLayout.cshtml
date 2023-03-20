@@ -1,0 +1,33 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>
+        @ViewData["Title"]- www.mysite.com
+    </title>
+
+</head>
+
+<body>
+   
+    <header>
+        <div>Header</div>
+        @await RenderSectionAsync("header", required: false)
+        @await RenderSectionAsync("Css", required: false)
+    </header>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody();
+        </main>
+    </div>
+
+    <footer class="background">
+            @await RenderSectionAsync("footer", required: false)
+        </p>
+    </footer>
+</body>
+
+</html>

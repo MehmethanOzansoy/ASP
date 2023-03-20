@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Mehmet Han Ozansoy</h1>
+
+@{
+    /*
+     * 
+     */
+    var name = ViewBag.name;
+
+    var liste = ViewBag.list;
+
+    var age = ViewData["age"];
+
+}
+
+<p>@name</p>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+</head>
+<body>
+ 
+    <h1>He is @age years old </h1>
+    
+    <h1>İsimler</h1>
+
+    @foreach (var item in ViewData["names"] as List<string>)
+    {
+        <p>@item</p>
+    }
+
+    
+    <p> @ViewBag.person.id - @ViewBag.person.name - @ViewBag.person.age </p>
+</body>
+</html>
+
+
+
+
+
+

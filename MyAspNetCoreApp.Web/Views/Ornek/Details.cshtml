@@ -1,0 +1,22 @@
+﻿@using MyAspNetCoreApp.Web.Controllers
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+@{
+    var data = TempData["Surname"];
+}
+
+
+<h1>Details</h1>
+
+<p> Ürünler = @data </p>
+
+
+@model List<Product2>
+
+@foreach (var item in Model)
+{
+    <p>@item.id - @item.name</p>
+}

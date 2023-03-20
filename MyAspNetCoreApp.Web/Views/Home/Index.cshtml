@@ -1,0 +1,51 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@section Css
+{
+    <style>
+
+        h1
+        {
+            color: red;
+            background-color : blue;
+        }
+            
+        h1
+    </style>
+}
+
+
+@section Scripts
+{
+    <script type="text/javascript">
+        alert("Welcome my page. ")
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            console.log("Hoşgeldiniz sayfamıza")
+        })
+    </script>
+
+}
+
+<h1>Merhaba Dünya</h1>
+
+@*@<partial name ="_listPartial" />
+
+<div>Günün Tarihi : @DateTime.Now.ToShortDateString()</div>
+@{
+
+    var dateTime = DateTime.Now.ToShortDateString();
+    var message = "Lütfen deneyiniz";
+
+    @: Bugün tarihi : @dateTime
+    <div>@message</div>
+
+    <text>Bugünün Tarihi: @dateTime</text>
+
+
+}
+*@
